@@ -1,8 +1,13 @@
 function computerPlay() {
-    const prs = ['paper', 'rocks', 'scissors'];
+    const prs = ['paper', 'rock', 'scissors'];
     return prs[Math.floor(Math.random() * prs.length)];
 }
+
+let playerSelection = prompt('write: paper, scissors, rock').toLowerCase();
+const computerSelection = computerPlay();
+
 function playRound(playerSelection, computerSelection) {
+
     if (playerSelection === computerSelection) {
         return 'You tied!'
     }
@@ -14,8 +19,8 @@ function playRound(playerSelection, computerSelection) {
     else if (playerSelection === 'rock' && computerSelection === 'paper' || playerSelection === 'paper' && computerSelection === 'scissors' || playerSelection === 'scissors' && computerSelection === 'rock') {
         return `You lose! ${computerSelection} beats ${playerSelection}`
     }
+
 }
-const playerSelection = prompt('write: paper, scissors, rock').toLowerCase();
-const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
-//console.log(computerPlay());
+// const result = playRound(playerSelection, computerSelection);
+// console.log(playerSelection + computerSelection);
+// console.log(result);
