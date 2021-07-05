@@ -18,16 +18,18 @@
             <div id="teams">
                 <div id="player-title">Human</div>
                 <div id="player-score">
-                    <span id="play-score">3</span>
+                    <span id="play-score">0</span>
                 </div>-
                 <div id="computer-score">
-                    <span id="pc-score">3</span>
+                    <span id="pc-score">0</span>
                 </div>
                 <div id="computer-title">Computer</div>
             </div>
+            <div id="result"></div>
             <div id="pick-container">
+
                 <div class="cards">
-                    <div class="card-item">
+                    <div class="card-item" onclick="game('rock')">
                         <div class="card-image">R
                         </div>
                         <div class="card-info">
@@ -37,7 +39,7 @@
                     </div>
                 </div>
                 <div class="cards">
-                    <div class="card-item">
+                    <div class="card-item" onclick="game('paper')">
                         <div class="card-image">P
                         </div>
                         <div class="card-info">
@@ -47,7 +49,7 @@
                     </div>
                 </div>
                 <div class="cards">
-                    <div class="card-item">
+                    <div class="card-item" onclick="game('scissors')">
                         <div class="card-image">S
                         </div>
                         <div class="card-info">
@@ -56,6 +58,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <button id="reset-btn" onclick="reset('')">Reset</button>
+            <div id="champion">
             </div>
         </div>
     </header>
